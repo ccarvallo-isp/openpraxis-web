@@ -2,7 +2,7 @@ import { projects } from '@/lib/data'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import { ArrowLeft, Building2, Code2, Trophy } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -35,11 +35,11 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
             </Link>
           </Button>
 
-          <motion.div
+{/*           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
+          > */}
             <div className="flex flex-wrap items-center gap-4 mb-6">
               <h1 className="text-3xl md:text-4xl font-bold text-op-purple-800 dark:text-white">
                 {project.title}
@@ -59,16 +59,16 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                 <span>{project.sector}</span>
               </div>
             </div>
-          </motion.div>
+          {/* </motion.div> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <motion.div
+{/*           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
-          >
+          > */}
             <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg mb-8">
               <Image
                 src={project.image}
@@ -101,13 +101,13 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                 ))}
               </div>
             </div>
-          </motion.div>
+{/*           </motion.div> */}
 
-          <motion.div
+{/*           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-          >
+          > */}
             <div className="bg-white dark:bg-op-purple-900/20 p-6 rounded-lg shadow-lg border border-gray-100 dark:border-op-purple-800">
               <h2 className="text-xl font-bold mb-6 text-op-purple-800 dark:text-white">
                 Resultados del Proyecto
@@ -136,7 +136,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
                 </Link>
               </Button>
             </div>
-          </motion.div>
+{/*           </motion.div> */}
         </div>
       </div>
     </div>
